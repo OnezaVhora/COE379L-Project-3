@@ -1,10 +1,10 @@
-Project 3 - Inference Server
+Project 3 - Binary Classification and Inference Server
 ============================
 
 Overview
 --------
 
-This project involves building an inference server that classifies satellite images as "damaged" or "not damaged" based on a trained model. The server is built using **Flask** and **TensorFlow** and is packaged in a Docker container for ease of deployment.
+This project involves building an inference server that classifies satellite images as "damage" or "no damaged" based on a trained model. The server is built using **Flask** and **TensorFlow** and is packaged in a Docker container for ease of deployment.
 
 Docker Image
 ------------
@@ -46,7 +46,7 @@ Once you have the Docker image, you can start the inference server using **Docke
 GitHub Repository
 -----------------
 
-The source code for this project, including the `Dockerfile`, `inference_server.py`, and other related files, is stored in this **GitHub repository**.
+The source code for this project, including the `Dockerfile`, `inference_server.py`, and other related files, is stored in this **Git repo**.
 
 **GitHub Repository Link**: https://github.com/OnezaVhora/COE379L-Project-3
 
@@ -75,10 +75,6 @@ The inference server provides the following two endpoints:
     `curl http://localhost:5000/summary`
 
     Response:
-
-    json
-
-    Copy code
 
     `{
       "name": "Damaged Building Classifier",
