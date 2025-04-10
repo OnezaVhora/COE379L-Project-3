@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  inference-server:
+    image: your-dockerhub-username/project3-inference-server:latest
+    container_name: project3-inference-server
+    ports:
+      - "5000:5000"  # Expose port 5000 to the host
+    environment:
+      - FLASK_ENV=development
+    restart: unless-stopped
