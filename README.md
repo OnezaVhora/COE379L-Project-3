@@ -11,10 +11,6 @@ Docker Image
 
 The inference server is packaged into a Docker image and hosted on **Docker Hub**. You can pull and run the image using the following command:
 
-pgsql
-
-Copy code
-
 `docker pull onezavhora/onezavhora-project3-inference-server:current`
 
 This Docker image contains the necessary environment, the pre-trained model, and the Flask server, allowing you to easily deploy the inference server on any machine with Docker installed.
@@ -25,19 +21,11 @@ Once you have the Docker image, you can start the inference server using **Docke
 
 1.  **Build and run the Docker container:**
 
-    bash
-
-    Copy code
-
     `docker-compose up --build`
 
 2.  **Stop the server:**
 
     To stop the server, use:
-
-    bash
-
-    Copy code
 
     `docker-compose down`
 
@@ -47,17 +35,9 @@ Once you have the Docker image, you can start the inference server using **Docke
 
     -   You can access the summary of the model by making a `GET` request to `/summary`:
 
-        bash
-
-        Copy code
-
         `curl http://localhost:5000/summary`
 
     -   You can send an image to the `/inference` endpoint using a `POST` request:
-
-        bash
-
-        Copy code
 
         `curl -X POST -F "image=@path_to_image.jpg" http://localhost:5000/inference`
 
@@ -115,17 +95,9 @@ The inference server provides the following two endpoints:
 
 -   **Example**:
 
-    bash
-
-    Copy code
-
     `curl -X POST -F "image=@path_to_image.jpg" http://localhost:5000/inference`
 
     Response:
-
-    json
-
-    Copy code
 
     `{
       "prediction": "damage"
@@ -138,25 +110,13 @@ If you want to push the image to your Docker Hub account, you will need to log i
 
 1.  **Login to Docker Hub**:
 
-    bash
-
-    Copy code
-
     `docker login`
 
 2.  **Tag the Docker image** (if needed):
 
-    bash
-
-    Copy code
-
     `docker tag onezavhora/project3-inference-server:current onezavhora/onezavhora-project3-inference-server:current`
 
 3.  **Push the image to Docker Hub**:
-
-    bash
-
-    Copy code
 
     `docker push onezavhora/onezavhora-project3-inference-server:current`
 
